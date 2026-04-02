@@ -72,8 +72,7 @@ event_player:
   s_killflip_sd1_active:
     reenable_sd2_flippers:
       delay: 2s
-  machine_var_current_ball{value==6}:
-    game_ending
+  machine_var_current_ball{value==6}: game_ending
 
 variable_player:
   mode_base_started:
