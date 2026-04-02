@@ -1,0 +1,287 @@
+#config_version=5
+
+hardware:
+  platform: opp
+  driverboards: gen2
+  segment_displays: light_segment_displays
+
+
+opp:
+  ports: COM3, COM4
+
+modes:
+  - base
+
+machine:
+  balls_installed: 1
+
+game:
+  balls_per_game: 3
+  max_players: 1
+
+config:
+   #Orange Displays
+   - neoSeg_0.yaml
+   - neoSeg_2dig_0.yaml
+   - neoSeg_2dig_1.yaml
+   #Blue Displays
+   - neoSeg_1.yaml
+   - neoSeg_2dig_2.yaml
+   - neoSeg_2dig_3.yaml
+   - display.yaml
+
+switches:
+  s_flipper_right_sd1:
+    number: 0-0-1  
+  s_flipper_left_sd1:
+    number: 0-0-2
+  s_outhole_sd1:
+    number: 0-0-9
+  s_shootlane_sd1:
+    number: 0-0-10
+  s_slingshot_right_sd1:
+    number: 0-0-11
+  s_slingshot_left_sd1:
+    number: 0-0-27
+  s_flipper_right_sd2:
+    number: 0-0-26
+  s_flipper_left_sd2:
+    number: 0-0-25
+  s_outhole_sd2:
+    number: 0-0-18
+  s_shootlane_sd2:
+    number: 0-0-17
+  s_slingshot_right_sd2:
+    number: 0-0-16
+  s_slingshot_left_sd2:
+    number: 1-0-1
+  s_popbmp_r:
+    number: 1-0-2
+  s_popbmp_l:
+    number: 1-0-3
+  s_killflip_sd1:
+    number: 1-0-8
+    tags: playfield_active
+  s_killflip_sd2:
+    number: 1-0-9
+    tags: playfield_active
+  s_spinner_sd1:
+    number: 1-0-10
+    tags: playfield_active
+  s_spinner_sd2:
+    number: 1-0-11
+    tags: playfield_active
+  s_1000pts_sd1:
+    number: 1-0-31
+    tags: playfield_active
+  s_1000pts_sd2:
+    number: 1-0-30
+    tags: playfield_active
+  s_100pts_sd1:
+    number: 1-0-29
+    tags: playfield_active
+  s_100pts_sd2:
+    number: 1-0-28
+    tags: playfield_active
+  s_coin:
+    number: 1-0-27
+    tags: start
+ 
+
+playfields:
+  playfield:
+    tags: default
+    default_source_device: bd_plunger
+  
+coils:
+  c_flipper_lower_right_main_sd1:
+    number: 0-0-14
+    default_pulse_ms: 20
+    default_hold_power: 0.125  
+  c_flipper_lower_left_main_sd1:
+    number: 0-0-13
+    default_pulse_ms: 20
+    default_hold_power: 0.125
+  c_flipper_lower_right_main_sd2:
+    number: 0-0-1
+    default_pulse_ms: 20
+    default_hold_power: 0.125  
+  c_flipper_lower_left_main_sd2:
+    number: 0-0-2
+    default_pulse_ms: 20
+    default_hold_power: 0.125
+
+  c_flipper_upper_right_main_sd1:
+    number: 0-0-12
+    default_pulse_ms: 20
+    default_hold_power: 0.125
+  c_flipper_upper_left_main_sd1:
+    number: 0-0-0
+    default_pulse_ms: 20
+    default_hold_power: 0.125
+  c_flipper_upper_right_main_sd2:
+    number: 0-0-3
+    default_pulse_ms: 20
+    default_hold_power: 0.125
+  c_flipper_upper_left_main_sd2:
+    number: 0-0-4
+    default_pulse_ms: 20
+    default_hold_power: 0.125
+
+  c_outhole_sd1:
+    number: 0-0-11
+    default_pulse_ms: 30
+  c_shootlane_sd1:
+    number: 0-0-10
+    default_pulse_ms: 30
+
+  c_slingshot_right_sd1:
+    number: 0-0-9
+  c_slingshot_left_sd1:
+    number: 0-0-8
+
+  c_outhole_sd2:
+    number: 0-0-5
+    default_pulse_ms: 30
+  c_shootlane_sd2:
+    number: 0-0-6
+    default_pulse_ms: 30
+
+  c_slingshot_right_sd2:
+    number: 0-0-7
+  c_slingshot_left_sd2:
+    number: 1-0-1
+
+  c_popbmp_r:
+    number: 1-0-2
+  c_popbmp_l:
+    number: 1-0-3
+  c_viking_eyes:
+    number: 1-0-4
+    allow_enable: true
+
+
+ball_devices:
+  bd_trough:
+    ball_switches: s_outhole_sd1
+    eject_coil: c_outhole_sd1
+    tags: trough, drain
+    entrance_count_delay: 2.2s
+    eject_targets: bd_plunger
+    eject_timeouts: 3s
+    debug: true
+    
+
+  bd_plunger:
+    ball_switches: s_shootlane_sd1
+    eject_coil: c_shootlane_sd1
+    tags: home
+    player_controlled_eject_event: s_flipper_right_sd1_active
+    entrance_count_delay: 2.2s
+    mechanical_eject: true
+    confirm_eject_type: switch
+    confirm_eject_switch: s_outhole_sd2
+    eject_timeouts: 3s
+
+  bd_trough_sd2:
+    ball_switches: s_outhole_sd2
+    eject_coil: c_outhole_sd2
+    tags: trough, drain
+    eject_targets: bd_plunger_sd2
+    entrance_count_delay: 2.2s
+    eject_timeouts: 3s
+
+  bd_plunger_sd2:
+    ball_switches: s_shootlane_sd2
+    eject_coil: c_shootlane_sd2
+    player_controlled_eject_event: s_flipper_right_sd2_active
+    entrance_count_delay: 2.2s
+    mechanical_eject: true
+    confirm_eject_type: switch
+    confirm_eject_switch: s_outhole_sd1
+    eject_timeouts: 3s
+
+
+autofire_coils:
+  left_slingshot_sd1:
+    coil: c_slingshot_left_sd1
+    switch: s_slingshot_left_sd1
+
+  right_slingshot_sd1:
+    coil: c_slingshot_right_sd1
+    switch: s_slingshot_right_sd1
+
+  left_slingshot_sd2:
+    coil:  c_slingshot_left_sd2
+    switch: s_slingshot_left_sd2
+
+  right_slingshot_sd2:
+    coil: c_slingshot_right_sd2
+    switch: s_slingshot_right_sd2
+
+  left_popbmp:
+    coil: c_popbmp_l
+    switch: s_popbmp_l
+
+  right_popbmp:
+    coil: c_popbmp_r
+    switch: s_popbmp_r
+
+  
+
+  
+
+  
+flippers:
+  lower_left_sd1:
+    main_coil: c_flipper_lower_left_main_sd1
+    activation_switch: s_flipper_left_sd1
+    label: Left Main Flipper SD1
+    enable_events: mode_base_started, reenable_sd1_flippers
+    disable_events: game_ending, s_killflip_sd2_active
+  lower_right_sd1:
+    main_coil: c_flipper_lower_right_main_sd1
+    activation_switch: s_flipper_right_sd1
+    label: Right Main Flipper SD1
+    enable_events: mode_base_started, reenable_sd1_flippers
+    disable_events: game_ending, s_killflip_sd2_active
+  lower_left_sd2:
+    main_coil: c_flipper_lower_left_main_sd2
+    activation_switch: s_flipper_left_sd2
+    label: Left Main Flipper SD2
+    enable_events: mode_base_started, reenable_sd2_flippers
+    disable_events: game_ending, s_killflip_sd1_active
+  lower_right_sd2:
+    main_coil: c_flipper_lower_right_main_sd2
+    activation_switch: s_flipper_right_sd2
+    label: Right Main Flipper SD2
+    enable_events: mode_base_started, reenable_sd2_flippers
+    disable_events: game_ending, s_killflip_sd1_active
+  upper_left_sd1:
+    main_coil: c_flipper_upper_left_main_sd1
+    activation_switch: s_flipper_left_sd1
+    label: Left Upper Flipper SD1
+    enable_events: mode_base_started, reenable_sd1_flippers
+    disable_events: game_ending, s_killflip_sd2_active
+  upper_right_sd1:
+    main_coil: c_flipper_upper_right_main_sd1
+    activation_switch: s_flipper_right_sd1
+    label: Right Upper Flipper SD1
+    enable_events: mode_base_started, reenable_sd1_flippers
+    disable_events: game_ending, s_killflip_sd2_active
+  upper_left_sd2:
+    main_coil: c_flipper_upper_left_main_sd2
+    activation_switch: s_flipper_left_sd2
+    label: Left Upper Flipper SD2
+    enable_events: mode_base_started, reenable_sd2_flippers
+    disable_events: game_ending, s_killflip_sd1_active
+  upper_right_sd2:
+    main_coil: c_flipper_upper_right_main_sd2
+    activation_switch: s_flipper_right_sd2
+    label: Right Upper Flipper SD2
+    enable_events: mode_base_started, reenable_sd2_flippers
+    disable_events: game_ending, s_killflip_sd1_active
+       
+
+
+    

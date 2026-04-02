@@ -1,0 +1,51 @@
+#config_version=5
+#attract mode config file
+
+autofire_coils:
+  outhole_sd2_attract:
+    coil: c_outhole_sd2
+    switch: s_outhole_sd2
+  plunger_sd2_attract:
+    coil: c_shootlane_sd2
+    switch: s_shootlane_sd2
+
+show_player:
+   mode_attract_started:
+      Joust:
+         action: play
+      
+shows:      
+   color_on:
+    - time: 0  
+      lights:
+         (led): (color)
+   Joust:
+    - duration: 5
+      segment_displays:
+         neoSeg0:
+            text: "GameOver"
+            transition:
+               type: push
+         neoSeg2d0:
+            text: "P1"
+         neoSeg1:
+            text: "GameOver"
+            transition:
+               type: push
+         neoSeg2d2:
+            text: "P2"
+    - duration: 5
+      segment_displays:
+         neoSeg0:
+            text: " JOUST "
+            transition:
+               type: push
+         neoSeg2d0:
+            text: "P1"
+         neoSeg1:
+            text: " JOUST "
+            transition:
+               type: push
+         neoSeg2d2:
+            text: "P2"
+

@@ -1,0 +1,39 @@
+#config_version=5
+
+segment_displays:
+  neoSeg0:
+    number: 1
+  neoSeg1:
+    number: 2
+  neoSeg2d0:
+    number: 3
+  neoSeg2d2:
+    number: 5
+
+segment_display_player:
+  game_start:
+    neoSeg0:
+      text: "{machine.p1_score:d}"
+    neoSeg1:
+      text: "{machine.p2_score:d}"
+    neoSeg2d0:
+      text: "{machine.current_ball:d}"
+    neoSeg2d2:
+      text: "{machine.current_ball:d}"
+
+  machine_var_p1_score:
+    neoSeg0:
+      text: "{machine.p1_score:d}"
+  machine_var_p2_score:
+    neoSeg1:
+      text: "{machine.p2_score:d}"
+  machine_var_current_ball:
+    neoSeg2d0:
+      text: "{machine.current_ball:d}"
+    neoSeg2d2:
+      text: "{machine.current_ball:d}"
+  game_ended:
+    neoSeg0:
+      text: "{machine.p1_score:d}"
+    neoSeg1:
+      text: "{machine.p2_score:d}"

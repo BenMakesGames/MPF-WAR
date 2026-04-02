@@ -1,0 +1,87 @@
+#config_version=5
+
+segment_displays:
+  neoSeg0:
+    number: 1
+  neoSeg1:
+    number: 2
+  neoSeg2d0:
+    number: 3
+  neoSeg2d1:
+    number: 4
+  neoSeg2d2:
+    number: 5
+
+segment_display_player:
+  # empty all displays on game start and setup neoSeg_5
+  game_start:
+    neoSeg0:
+      text: "{machine.player1_score:d}"
+    neoSeg1:
+      text: "{current_player.ball:d}"
+    neoSeg2d0:
+      text: ""
+    neoSeg2d1:
+      text: ""
+    neoSeg2d2:
+      text: ""
+
+  # clear only neoSeg_5 after game
+  game_ended{machine.player1_score > 0}:
+    neoSeg0:
+      text: "{machine.player1_score:d}"
+  game_ended{machine.player2_score > 0}:
+    neoSeg1:
+      text: "{machine.player2_score:d}"
+  game_ended{machine.player3_score > 0}:
+    neoSeg2d0:
+    text: "{machine.player3_score:d}"
+  game_ended{machine.player4_score > 0}:
+    neoSeg_2d1:
+      text: "{machine.player4_score:d}"
+  game_ended:
+    neoSeg_2d2:
+      text: ""
+
+# flash display on player turn
+player_turn_started.1{number==1}:
+  neoSeg0:
+    action: flash
+player_turn_ended.2{number==1}:
+  neoSeg1:
+    action: no_flash
+player_turn_started.3{number==2}:
+  neoSeg2d0:
+    action: flash
+player_turn_ended.4{number==2}:
+  neoSeg2d0:
+    action: no_flash
+player_turn_started.5{number==3}:
+  neoSeg2d1:
+    action: flash
+player_turn_ended.6{number==3}:
+  neoSeg2d1:
+    action: no_flash
+player_turn_started.7{number==4}:
+  neoSeg2d2:
+    action: flash
+player_turn_ended.8{number==4}:
+  neoSeg2d2:
+    action: no_flash
+
+# show score when adding players
+player_added.1{num==1}:
+  neoSeg0
+    text: "{players[0].score:d}"
+player_added.2{num==2}:
+  neoSeg1:
+    text: "{players[1].score:d}"
+player_added.3{num==3}:
+  neoSeg2d0:
+    text: "{players[2].score:d}"
+player_added.4{num==4}:
+  neoSeg2d1:
+    text: "{players[3].score:d}"
+player_added.4{num==4}:
+  neoSeg2d2:
+    text: "{players[3].score:d}"

@@ -1,0 +1,26 @@
+#show_version=5
+
+- time: 0
+  lights:
+      row8: 101010
+- time: +1
+  lights:
+      row7: 202020
+- time: +1
+  lights:
+      row6: 303030
+- time: +1
+  lights:
+      row5: 505050
+- time: +1
+  lights:
+      row4: 707070
+- time: +1
+  lights:
+      row3: 909090
+- time: +1
+  lights:
+      row2: c0c0c0
+- time: +1
+  lights:
+      row1: f0f0f0

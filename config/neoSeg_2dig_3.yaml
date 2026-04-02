@@ -1,0 +1,230 @@
+#config_version=5
+
+lights:
+  
+   l_neoseg_2d_3_0_b:
+      previous: l_neoseg_2d_2_0_f
+      # start_channel: 0-0-150 #should be board-0-channel where channel=[channels per pixel] x [pixels before NeoSeg].
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_0_g2:
+      previous: l_neoseg_2d_3_0_b
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_0_l:
+      previous: l_neoseg_2d_3_0_g2
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_0_c:
+      previous: l_neoseg_2d_3_0_l
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_0_dp:
+      previous: l_neoseg_2d_3_0_c
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_0_a:
+      previous: l_neoseg_2d_3_0_dp
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+
+   l_neoseg_2d_3_1_d:
+      previous: l_neoseg_2d_3_0_a
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_1_m:
+      previous: l_neoseg_2d_3_1_d
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_1_n:
+      previous: l_neoseg_2d_3_1_m
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_1_e:
+      previous: l_neoseg_2d_3_1_n
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_1_g1:
+      previous: l_neoseg_2d_3_1_e
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_1_j:
+      previous: l_neoseg_2d_3_1_g1
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_1_h:
+      previous: l_neoseg_2d_3_1_j
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_1_f:
+      previous: l_neoseg_2d_3_1_h
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_1_a:
+      previous: l_neoseg_2d_3_1_f
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+
+   l_neoseg_2d_3_1_k:
+      previous: l_neoseg_2d_3_1_a
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_1_b:
+      previous: l_neoseg_2d_3_1_k
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_1_g2:
+      previous: l_neoseg_2d_3_1_b
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_1_l:
+      previous: l_neoseg_2d_3_1_g2
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_1_c:
+      previous: l_neoseg_2d_3_1_l
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_1_dp:
+      previous: l_neoseg_2d_3_1_c
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_1
+      color_correction_profile: NeoSeg_blue
+
+   l_neoseg_2d_3_0_k:
+      previous: l_neoseg_2d_3_1_dp
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_0_d:
+      previous: l_neoseg_2d_3_0_k
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_0_m:
+      previous: l_neoseg_2d_3_0_d
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_0_n:
+      previous: l_neoseg_2d_3_0_m
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_0_e:
+      previous: l_neoseg_2d_3_0_n
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_0_g1:
+      previous: l_neoseg_2d_3_0_e
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_0_j:
+      previous: l_neoseg_2d_3_0_g1
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_0_h:
+      previous: l_neoseg_2d_3_0_j
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+   l_neoseg_2d_3_0_f:
+      previous: l_neoseg_2d_3_0_h
+      type: w
+      subtype: led
+      tags: l_neoseg_2d_3_0
+      color_correction_profile: NeoSeg_blue
+
+
+# l, m, n, k, j, h, g2, g1, f, e, d, c, b, a and dp
+segment_displays:
+  neoSeg2d3:
+    number: 6
+    size: 8
+    integrated_dots: true
+    default_transition_update_hz: 24
+    platform_settings:
+      lights:
+        - a: l_neoseg_2d_3_0_a
+          b: l_neoseg_2d_3_0_b
+          c: l_neoseg_2d_3_0_c
+          d: l_neoseg_2d_3_0_d
+          e: l_neoseg_2d_3_0_e
+          f: l_neoseg_2d_3_0_f
+          g1: l_neoseg_2d_3_0_g1
+          h: l_neoseg_2d_3_0_h
+          k: l_neoseg_2d_3_0_k
+          m: l_neoseg_2d_3_0_m
+          n: l_neoseg_2d_3_0_n
+          j: l_neoseg_2d_3_0_j
+          l: l_neoseg_2d_3_0_l
+          g2: l_neoseg_2d_3_0_g2
+          dp: l_neoseg_2d_3_0_dp
+        - a: l_neoseg_2d_3_1_a
+          b: l_neoseg_2d_3_1_b
+          c: l_neoseg_2d_3_1_c
+          d: l_neoseg_2d_3_1_d
+          e: l_neoseg_2d_3_1_e
+          f: l_neoseg_2d_3_1_f
+          g1: l_neoseg_2d_3_1_g1
+          h: l_neoseg_2d_3_1_h
+          k: l_neoseg_2d_3_1_k
+          m: l_neoseg_2d_3_1_m
+          n: l_neoseg_2d_3_1_n
+          j: l_neoseg_2d_3_1_j
+          l: l_neoseg_2d_3_1_l
+          g2: l_neoseg_2d_3_1_g2
+          dp: l_neoseg_2d_3_1_dp
+      type: 14segment

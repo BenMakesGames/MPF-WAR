@@ -1,0 +1,45 @@
+shooter_lane_sd2:
+    coil: c_shootlane_sd2
+    switch: s_shootlane_sd2
+  outhole_sd2:
+    coil: c_outhole_sd2
+    switch: s_outhole_sd2
+  shooter_lane_sd1:
+    coil: c_shootlane_sd1
+    switch: s_shootlane_sd1
+  outhole_sd1:
+    coil: c_outhole_sd1
+    switch: s_outhole_sd1
+
+eject_targets: bd_plunger
+
+shooter_lane_sd2:
+    coil: c_shootlane_sd2
+    switch: s_shootlane_sd2
+    enable_events: start
+    disable_events: stop
+  outhole_sd2:
+    coil: c_outhole_sd2
+    switch: s_outhole_sd2
+  shooter_lane_sd1:
+    coil: c_shootlane_sd1
+    switch: s_shootlane_sd1
+    coil_pulse_delay: 3.0sec
+  outhole_sd1:
+    coil: c_outhole_sd1
+    switch: s_outhole_sd1
+    enable_events: start
+    disable_events: stop
+    coil_pulse_delay: 3.0sec
+
+
+
+shooter_lane_sd1:
+    coil: c_shootlane_sd1
+    switch: s_shootlane_sd1
+    coil_pulse_delay: 30ms
+  
+  outhole_sd1:
+    coil: c_outhole_sd1
+    switch: s_outhole_sd1
+    coil_pulse_delay: 30ms

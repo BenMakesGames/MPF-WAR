@@ -1,0 +1,42 @@
+events:
+  game_ended: 14
+  game_started: 62
+player:
+  score:
+    average: 35793.333333333336
+    top:
+    - 96300
+    - 87300
+    - 83200
+    - 77200
+    - 35900
+    - 33900
+    - 25000
+    - 18450
+    - 17650
+    - 13100
+    total: 15
+switches:
+  s_1000pts_sd1: 7
+  s_1000pts_sd2: 17
+  s_100pts_sd1: 364
+  s_100pts_sd2: 435
+  s_coin: 5
+  s_flipper_left_sd1: 122
+  s_flipper_left_sd2: 138
+  s_flipper_right_sd1: 179
+  s_flipper_right_sd2: 168
+  s_killflip_sd1: 33
+  s_killflip_sd2: 9
+  s_outhole_sd1: 309
+  s_outhole_sd2: 99
+  s_popbmp_l: 18
+  s_popbmp_r: 20
+  s_shootlane_sd1: 273
+  s_shootlane_sd2: 89
+  s_slingshot_left_sd1: 46
+  s_slingshot_left_sd2: 169
+  s_slingshot_right_sd1: 180
+  s_slingshot_right_sd2: 55
+  s_spinner_sd1: 0
+  s_spinner_sd2: 0
