@@ -205,9 +205,6 @@ autofire_coils:
     coil: c_popbmp_r
     switch: s_popbmp_r
 
-  outhole_sd1:
-    coil: c_outhole_sd1
-    switch: s_outhole_sd1
   outhole_sd2:
     coil: c_outhole_sd2
     switch: s_outhole_sd2
