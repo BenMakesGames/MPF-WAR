@@ -227,11 +227,18 @@ autofire_coils:
     coil: c_popbmp_r
     switch: s_popbmp_r
 
-  
+  outhole_sd1:
+    coil: c_outhole_sd1
+    switch: s_outhole_sd1
+  outhole_sd2:
+    coil: c_outhole_sd2
+    switch: s_outhole_sd2
+  plunger_sd2_attract:
+    coil: c_shootlane_sd2
+    switch: s_shootlane_sd2
+    enable_events: mode_attract_started
+    disable_events: mode_attract_stopped
 
-  
-
-  
 flippers:
   lower_left_sd1:
     main_coil: c_flipper_lower_left_main_sd1

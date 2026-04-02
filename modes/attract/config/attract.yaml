@@ -1,14 +1,6 @@
 #config_version=5
 #attract mode config file
 
-autofire_coils:
-  outhole_sd2_attract:
-    coil: c_outhole_sd2
-    switch: s_outhole_sd2
-  plunger_sd2_attract:
-    coil: c_shootlane_sd2
-    switch: s_shootlane_sd2
-
 show_player:
    mode_attract_started:
       Joust:

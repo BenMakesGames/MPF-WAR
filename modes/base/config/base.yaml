@@ -7,14 +7,6 @@ mode:
 
 
 
-autofire_coils:
-  outhole_sd1_game:
-    coil: c_outhole_sd1
-    switch: s_outhole_sd1
-  outhole_sd2_game:
-    coil: c_outhole_sd2
-    switch: s_outhole_sd2
-
 coil_player:
   s_slingshot_right_sd1_active:
     c_viking_eyes:
