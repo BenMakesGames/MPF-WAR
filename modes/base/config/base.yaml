@@ -78,75 +78,74 @@ variable_player:
   mode_base_started:
     current_ball:
       int: 1
-      action: set
-      type: machine
+      action: set_machine
   s_slingshot_right_sd1_active:
     p2_score:
       int: 1000
-      type: machine
+      action: add_machine
   s_slingshot_left_sd1_active:
     p2_score:
       int: 1000
-      type: machine
+      action: add_machine
   s_slingshot_right_sd2_active:
     p1_score:
       int: 1000
-      type: machine
+      action: add_machine
   s_slingshot_left_sd2_active:
     p1_score:
       int: 1000
-      type: machine
+      action: add_machine
   s_killflip_sd1_active:
     p2_score:
       int: 10000
-      type: machine
+      action: add_machine
   s_killflip_sd2_active:
     p1_score:
       int: 10000
-      type: machine
+      action: add_machine
   s_spinner_sd1_active:
     p2_score:
       int: 500
-      type: machine
+      action: add_machine
   s_spinner_sd2_active:
     p1_score:
       int: 500
-      type: machine
+      action: add_machine
   s_1000pts_sd1_active:
     p2_score:
       int: 1000
-      type: machine
+      action: add_machine
   s_1000pts_sd2_active:
     p1_score:
       int: 1000
-      type: machine
+      action: add_machine
   s_100pts_sd1_active:
     p2_score:
       int: 100
-      type: machine
+      action: add_machine
   s_100pts_sd2_active:
     p1_score:
       int: 100
-      type: machine
+      action: add_machine
   s_outhole_sd1_active:
     p2_score:
       int: 10000
-      type: machine
+      action: add_machine
     current_ball:
       int: 1
-      type: machine
+      action: add_machine
   s_outhole_sd2_active:
     p1_score:
       int: 10000
-      type: machine
+      action: add_machine
     current_ball:
       int: 1
-      type: machine
+      action: add_machine
   s_popbmp_l_active:
     p1_score:
       int: 50
-      type: machine
+      action: add_machine
   s_popbmp_r_active:
     p2_score:
       int: 50
-      type: machine
+      action: add_machine
